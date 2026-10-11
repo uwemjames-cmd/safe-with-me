@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:wght@500;700&family=Dancing+Script:wght@500;700&family=Caveat:wght@500;700&family=Uncial+Antiqua&family=IM+Fell+English:ital@0;1&family=Cinzel+Decorative:wght@700&display=swap');
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-warm text-navy font-sans antialiased}
+@keyframes fall{from{transform:translateY(-10vh) translateX(0)}50%{transform:translateY(55vh) translateX(18px)}to{transform:translateY(112vh) translateX(-8px)}}
+@keyframes curtL{to{transform:translateX(-101%)}}
+@keyframes curtR{to{transform:translateX(101%)}}
+@keyframes curtFade{to{opacity:0}}
+.curtain{position:fixed;top:0;bottom:0;width:50%;z-index:70;pointer-events:none;background:repeating-linear-gradient(90deg,#b83a5c 0,#d65577 28px,#a62f50 60px);box-shadow:inset 0 0 70px rgba(0,0,0,.35);animation-duration:2.6s;animation-timing-function:cubic-bezier(.7,0,.25,1);animation-delay:.6s;animation-fill-mode:forwards}
+.curtain.l{left:0;animation-name:curtL}
+.curtain.r{right:0;animation-name:curtR}
